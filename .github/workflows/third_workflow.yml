@@ -6,8 +6,8 @@ jobs:
   run-first-command: 
     runs-on: ubuntu-latest
     steps:
-      - name: Path
-        run: |
-          pwd
-          ls
-          
+      - name: list files and copy repo
+        run: ls
+      - uses: actions/checkout@v4
+      - name: list files 
+        run: ls
