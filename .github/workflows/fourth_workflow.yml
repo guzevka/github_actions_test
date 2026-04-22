@@ -8,8 +8,15 @@ on:
 
 
 jobs: 
-  hello-command: 
+  success-command: 
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - name: Display text
-        run: echo "hello :)))"
+      - name: Success
+        run: echo "success :)))"
+  failure-command:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - name: failure
+        run: echo "failure :((("
