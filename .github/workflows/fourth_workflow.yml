@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Display text
-        run: echo "hello :)"
+        run: echo "hello :)))"
