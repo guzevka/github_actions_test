@@ -8,3 +8,7 @@ jobs:
     steps:
       - name: Display text
         run: echo "Some text"
+      - name: Command in Multiline
+        run: |
+          python --version
+          docker version
